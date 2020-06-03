@@ -24,11 +24,12 @@ else {
 //MINE
 //variabili mine
 var mine = [];
+var minaTemp = 0;
 var i=0;
 
 //creazione 16 mine
 while (i<16) {
-  var minaTemp = Math.ceil(Math.random() * difficolta);
+  minaTemp = Math.ceil(Math.random() * difficolta);
   if (!mine.includes(minaTemp)) {
     mine[i] = minaTemp
     i+=1;
@@ -49,7 +50,7 @@ var punteggio = 0;
 //core gioco
 while (risultato == "") {
   numeroUtente = parseInt(prompt("Dimmi un numero tra 1 e 100"));
-  if (!isNaN(numeroUtente) && !numeroUtenteArray.includes(numeroUtente)) {
+  if (!isNaN(numeroUtente) && !numeroUtenteArray.includes(numeroUtente) && numeroUtente >0 && numeroUtente <=100)  {
     if (mine.includes(numeroUtente)) {
       risultato = "Hai perso!";
     }
