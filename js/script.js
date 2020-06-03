@@ -1,8 +1,20 @@
-//DIFFICOLTA'
+//VARIABILI
 //variabili difficoltà
 var difficoltaUtente = -1;
 var difficolta = 0;
 
+//variabili mine
+var mine = [];
+var minaTemp = 0;
+var i=0;
+
+//variabili gioco e tabellone
+var risultato = "";
+var numeroUtente;
+var numeroUtenteArray = [];
+var punteggio = 0;
+
+//DIFFICOLTA'
 //prompt richiesta difficoltà
 while (difficoltaUtente <0 || difficoltaUtente >2 || isNaN(difficoltaUtente)) {
   difficoltaUtente = parseInt(prompt("Dimmi la difficoltà (0 = facile, 1= medio, 2= difficile)"))
@@ -22,11 +34,6 @@ else {
 }
 
 //MINE
-//variabili mine
-var mine = [];
-var minaTemp = 0;
-var i=0;
-
 //creazione 16 mine
 while (i<16) {
   minaTemp = Math.ceil(Math.random() * difficolta);
@@ -41,12 +48,6 @@ while (i<16) {
 }
 
 //GIOCO E TABELLONE
-//variabili gioco e tabellone
-var risultato = "";
-var numeroUtente;
-var numeroUtenteArray = [];
-var punteggio = 0;
-
 //core gioco
 while (risultato == "") {
   numeroUtente = parseInt(prompt("Dimmi un numero tra 1 e 100"));
