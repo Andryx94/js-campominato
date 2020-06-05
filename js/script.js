@@ -44,6 +44,7 @@ alert(risultato + " Il tuo punteggio è: " + punteggio);
 
 //FUNZIONE selezione difficoltà
 function selettoreDifficolta(difficoltaUtente){
+  var difficolta = 0;
   switch(difficoltaUtente) {
     case 0:
     difficolta = 100;
@@ -60,6 +61,7 @@ function selettoreDifficolta(difficoltaUtente){
 
 //FUNZIONE creazione mine
 function creazioneMine(difficolta, n){
+  var mine = [];
   var minaTemp = 0;
 
   while (mine.length<n) {
